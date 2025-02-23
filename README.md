@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+..............................*PowerHouse Fitness Website Documentation*................................
 
-## Getting Started
 
-First, run the development server:
+📖 Overview:
+PowerHouse is a comprehensive fitness web application built with Next.js. It empowers users to manage workouts, track progress, and access a diverse library of exercises, offering a seamless and intuitive fitness management experience.
 
-```bash
+🚀 Features:
+
+🔐 Authentication:
+User registration and login functionality.
+Google OAuth integration.
+Secure authentication with NextAuth.js.
+Protected routes for authenticated users.
+
+💪 Core Functionalities:
+Workout Library: Browse and search a comprehensive list of exercises.
+Dashboard: Personalize and manage your workouts.
+Progress Tracker: Monitor fitness progress over time.
+Custom Workout Generation: AI-powered workout suggestions tailored to user goals.
+Responsive Design: Mobile-first approach for seamless cross-device usability.
+
+
+
+🛠 Tech Stack:-
+
+🎨 Frontend:
+Next.js 13+ (App Router)
+React
+Tailwind CSS
+Framer Motion (for animations)
+🔧 Backend:
+Firebase
+NextAuth.js (authentication)
+Node.js
+🗄 Database:
+Firebase Firestore
+
+
+📂 Project Structure:
+csharp-
+workoutgen/
+├── app/
+│   ├── dashboard/       # User dashboard
+│   ├── library/         # Exercise library
+│   ├── login/           # Authentication pages
+│   ├── progress/        # Progress tracking
+│   └── about/           # About the platform
+├── components/
+│   ├── auth/            # Authentication components
+│   ├── layout/          # Reusable layout components
+│   └── ui/              # User interface components
+├── context/
+│   └── AuthContext.js   # Authentication context
+├── firebase/
+│   └── config.js        # Firebase configuration
+├── public/              # Public assets
+└── styles/              # Global stylesheets
+
+⚙ Setup Instructions
+Clone the Repository:
+bash-
+git clone https://github.com/your-username/powerhouse-fitness.git
+cd powerhouse-fitness
+
+Install Dependencies:
+bash-
+npm install
+
+Set Up Environment Variables:
+Create a .env.local file in the root directory.
+Add the following environment variables:
+ini-
+NEXTAUTH_URL=your_app_url
+FIREBASE_API_KEY=your_firebase_api_key
+FIREBASE_PROJECT_ID=your_project_id
+
+Run the Development Server:
+bash-
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🔑 Key Components:-
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📌 Navigation:
+Responsive navbar with a mobile-friendly menu.
+UI adapts based on the authentication state.
+Dynamic route highlighting for active pages.
 
-## Learn More
+🔒 Authentication Flow:
+Email and password-based authentication.
+Google OAuth integration.
+Protected routes using middleware for secure access.
 
-To learn more about Next.js, take a look at the following resources:
+🏋 Workout Management:
+Create and customize workouts.
+Save favorite exercises for easy access.
+Track and view workout history.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📊 Progress Tracking:
+Record workout data.
+Visualize progress through charts.
+Set and monitor personal fitness goals.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🚀 Deployment:
+This application is ready for deployment on Vercel-
+Connect your GitHub repository to Vercel.
+Configure environment variables in the Vercel dashboard.
+Deploy with automatic CI/CD pipelines for seamless updates.
 
-## Deploy on Vercel
+🤝 Contributing:
+Fork the repository.
+Create a new feature branch (git checkout -b feature/your-feature).
+Commit your changes (git commit -m 'Add your message').
+Push to your branch (git push origin feature/your-feature).
+Open a pull request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📜 License:
+This project is licensed under the MIT License.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+📬 Contact:
+For support or queries, feel free to reach out:
+
+Name: Priyanshu Anand
+
+Email: priyanshu82711@gmail.com
+
+Contact Number: +91 6205146659
