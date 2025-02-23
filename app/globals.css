@@ -19,3 +19,455 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+#heading {
+  padding: 30px 50px;
+  margin-top: 80px;
+}
+
+#heading h1 {
+  font-size: 9vw;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+#bounding {
+  width: fit-content;
+  overflow: hidden;
+}
+
+.boundingelem {
+  transform: translateY(100%);
+  opacity: 0;
+  
+  animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes blob1 {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes blob2 {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-30px, 50px) scale(1.1); }
+  66% { transform: translate(20px, -20px) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes blob1-fast {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(40px, -30px) scale(1.2); }
+  50% { transform: translate(-20px, 40px) scale(0.8); }
+  75% { transform: translate(20px, -20px) scale(1.1); }
+}
+
+@keyframes blob2-fast {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-30px, 40px) scale(1.2); }
+  50% { transform: translate(40px, -20px) scale(0.8); }
+  75% { transform: translate(-20px, 30px) scale(1.1); }
+}
+
+@keyframes blob3-fast {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, 30px) scale(1.1); }
+  50% { transform: translate(-40px, -30px) scale(0.9); }
+  75% { transform: translate(20px, -40px) scale(1.2); }
+}
+
+@keyframes blob4-fast {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-20px, -40px) scale(1.2); }
+  50% { transform: translate(30px, 30px) scale(0.8); }
+  75% { transform: translate(-40px, 20px) scale(1.1); }
+}
+
+@keyframes blob5-fast {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(40px, 20px) scale(1.1); }
+  50% { transform: translate(-30px, -40px) scale(0.9); }
+  75% { transform: translate(20px, 30px) scale(1.2); }
+}
+
+@keyframes blob6-fast {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-40px, 30px) scale(1.2); }
+  50% { transform: translate(20px, -20px) scale(0.8); }
+  75% { transform: translate(-30px, -30px) scale(1.1); }
+}
+
+@keyframes blob7-fast {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -40px) scale(1.1); }
+  50% { transform: translate(-20px, 30px) scale(0.9); }
+  75% { transform: translate(40px, -20px) scale(1.2); }
+}
+
+@keyframes glow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes gradient-x-fast {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes metallicShine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes subtle-drift {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Add this animation if not already present */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+.blocktext {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: fit-content;
+}
+
+.blocktext h1 {
+  text-align: right;
+}
+
+#secondh1 {
+  margin-right: 10px;
+}
+
+.blocktext h4 {
+  text-align: right;
+  color: var(--medium);
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-size: 1.2vw;
+  letter-spacing: 2px;
+  animation-delay: 0.5s;
+}
+
+/* Add these variables if not already defined in your CSS */
+:root {
+  --primary: #00df82;    /* bright green */
+  --medium: #03624c;     /* medium teal */
+}
+
+/* Update Navbar Styles */
+.nav-link::after {
+  @apply absolute bottom-0 left-0 w-full h-0.5 transform scale-x-0 transition-transform duration-300 origin-right;
+  content: '';
+  background: linear-gradient(to right, #03624c, #00df82);
+}
+
+.nav-link:hover::after {
+  @apply scale-x-100 origin-left;
+}
+
+/* Update glow effects */
+.glow-effect::before {
+  @apply absolute top-0 -left-full w-full h-full transition-all duration-500;
+  content: '';
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 223, 130, 0.2),
+    transparent
+  );
+}
+
+.animate-gradient-slow {
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+.animate-blob1 {
+  animation: blob1 7s infinite;
+}
+
+.animate-blob2 {
+  animation: blob2 7s infinite;
+}
+
+.animate-gradient-fast {
+  animation: gradient 8s ease infinite;
+  background-size: 300% 300%;
+  filter: saturate(1.2);
+}
+
+.animate-blob1-fast {
+  animation: blob1-fast 4s infinite, glow 3s infinite;
+}
+
+.animate-blob2-fast {
+  animation: blob2-fast 4s infinite, glow 3s infinite;
+  animation-delay: 0.5s;
+}
+
+.animate-blob3-fast {
+  animation: blob3-fast 4s infinite, glow 3s infinite;
+  animation-delay: 1s;
+}
+
+.animate-blob4-fast {
+  animation: blob4-fast 4s infinite, glow 3s infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-blob5-fast {
+  animation: blob5-fast 4s infinite, glow 3s infinite;
+  animation-delay: 2s;
+}
+
+.animate-blob6-fast {
+  animation: blob6-fast 4s infinite, glow 3s infinite;
+  animation-delay: 2.5s;
+}
+
+.animate-blob7-fast {
+  animation: blob7-fast 4s infinite, glow 3s infinite;
+  animation-delay: 3s;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+}
+
+.animate-gradient-x-fast {
+  animation: gradient-x-fast 8s ease infinite;
+}
+
+.animate-subtle-drift {
+  animation: subtle-drift 30s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.metallic-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.metallic-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 223, 130, 0.4) 25%,
+    rgba(3, 98, 76, 0.6) 50%,
+    rgba(0, 223, 130, 0.4) 75%,
+    transparent 100%
+  );
+  animation: metallicShine 2s linear infinite;
+}
+
+.glass-effect {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  backdrop-filter: blur(10px);
+}
+
+/* Calendar Custom Styles */
+.react-calendar {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: calc(100vh - 200px) !important;
+  background-color: transparent !important;
+  border: none !important;
+  font-family: inherit;
+}
+
+.react-calendar__viewContainer {
+  height: calc(100% - 50px) !important;
+}
+
+.react-calendar__month-view {
+  height: 100% !important;
+  padding: 0.5rem;
+}
+
+.react-calendar__month-view > div {
+  height: 100%;
+}
+
+.react-calendar__month-view__days {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr) !important;
+  grid-template-rows: repeat(auto-fit, 1fr) !important;
+  gap: 4px !important;
+  height: 100% !important;
+  padding: 0.5rem !important;
+}
+
+.react-calendar__month-view__days__day {
+  aspect-ratio: 1 !important;
+  max-width: none !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.react-calendar button {
+  color: #fff !important;
+  padding: 8px !important;
+  background: transparent !important;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.react-calendar button:hover {
+  background: rgba(0, 223, 130, 0.1) !important;
+  color: #00df82 !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #ff4444 !important;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #666 !important;
+}
+
+.react-calendar__tile--now {
+  background: rgba(0, 223, 130, 0.1) !important;
+  color: #00df82 !important;
+}
+
+.react-calendar__tile--active {
+  background: #00df82 !important;
+  color: black !important;
+}
+
+.react-calendar__navigation button {
+  font-size: 1.2rem;
+  color: #00df82 !important;
+}
+
+.react-calendar__navigation button:disabled {
+  color: #666 !important;
+}
+
+.react-calendar__navigation button:hover:enabled {
+  background: rgba(0, 223, 130, 0.1) !important;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  color: #00df82 !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 8px;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none !important;
+}
+
+.react-calendar__tile {
+  position: relative !important;
+  height: 60px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  aspect-ratio: 1/1 !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 2px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+}
+
+.react-calendar__tile--completed:enabled:hover,
+.react-calendar__tile--completed:enabled:focus {
+  background-color: rgba(34, 197, 94, 0.3) !important;
+}
+
+.react-calendar__tile--missed:enabled:hover,
+.react-calendar__tile--missed:enabled:focus {
+  background-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+.react-calendar__tile--rest:enabled:hover,
+.react-calendar__tile--rest:enabled:focus {
+  background-color: rgba(234, 179, 8, 0.3) !important;
+}
