@@ -114,15 +114,3 @@ Commit your changes (git commit -m 'Add your message').
 Push to your branch (git push origin feature/your-feature).
 Open a pull request.
 
-📜 License:
-This project is licensed under the MIT License.
-
-
-📬 Contact:
-For support or queries, feel free to reach out:
-
-Name: Priyanshu Anand
-
-Email: priyanshu82711@gmail.com
-
-Contact Number: +91 6205146659
